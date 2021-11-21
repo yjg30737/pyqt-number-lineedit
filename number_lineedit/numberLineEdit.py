@@ -14,8 +14,7 @@ class NumberLineEdit(QLineEdit):
         self.setValidator(QRegExpValidator(QRegExp('^([1-9][0-9]+\.?|0\.)[0-9]+$'), self))
 
     def textChanged(self, a0: str) -> None:
-        if self.__comma_flag:
-            self.__setCommaToLineEditNumber(self.__comma_flag)
+        self.__setCommaToLineEditNumber(self.__comma_flag)
         return super().textChanged(a0)
 
     def setComma(self, f: bool):
