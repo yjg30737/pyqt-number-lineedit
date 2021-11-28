@@ -11,7 +11,7 @@ class NumberLineEdit(QLineEdit):
 
     def __initUi(self):
         self.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
-        self.setValidator(QRegExpValidator(QRegExp('^([1-9][0-9]+\.?|0\.)[0-9]+$'), self))
+        self.setValidator(QRegExpValidator(QRegExp('^([1-9][0-9]*\.?|0\.)[0-9]+$'), self))
         self.textEdited.connect(self.__textEdited)
 
     def __textEdited(self, text):
