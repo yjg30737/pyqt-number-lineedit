@@ -21,7 +21,6 @@ class NumberLineEdit(QLineEdit):
 
     def setComma(self, f: bool):
         self.__comma_enabled = f
-        self.setCommaToText()
 
     def setCommaToText(self):
         text = self.text()
