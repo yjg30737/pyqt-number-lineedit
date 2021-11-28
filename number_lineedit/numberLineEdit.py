@@ -24,6 +24,7 @@ class NumberLineEdit(QLineEdit):
 
     def setCommaToText(self):
         text = self.text()
+        print('setCommaToText called: {0}'.format(text))
         if text:
             if self.__comma_enabled:
                 if text.find('.') == -1:
@@ -32,5 +33,6 @@ class NumberLineEdit(QLineEdit):
                     pre_dot, post_dot = text.split('.')
                     text = '{:,}'.format(int(pre_dot)) + '.' + post_dot
                     self.setText(text)
+                print('setCommaToText set text: {0}'.format(text))
             else:
                 self.setText(text.replace(',', ''))
