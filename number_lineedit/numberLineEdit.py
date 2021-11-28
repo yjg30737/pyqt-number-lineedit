@@ -12,23 +12,26 @@ class NumberLineEdit(QLineEdit):
     def __initUi(self):
         self.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
         self.setValidator(QRegExpValidator(QRegExp('^([1-9][0-9]+\.?|0\.)[0-9]+$'), self))
-        self.textChanged.connect(self.__textChanged)
+        self.textEdited.connect(self.__textEdited)
 
-    def __textChanged(self, text):
+    def __textEdited(self, text):
         print('textChanged called: {0}'.format(text))
         if self.__comma_enabled:
             self.setCommaToText()
 
     def setComma(self, f: bool):
         self.__comma_enabled = f
+        self.setCommaToText()
 
     def setCommaToText(self):
         text = self.text()
         if text:
             if self.__comma_enabled:
                 if text.find('.') == -1:
+                    text = text.replace(',', '')
                     self.setText('{:,}'.format(int(text)))
                 else:
+                    text = text.replace(',', '')
                     pre_dot, post_dot = text.split('.')
                     text = '{:,}'.format(int(pre_dot)) + '.' + post_dot
                     self.setText(text)
