@@ -15,7 +15,6 @@ class NumberLineEdit(QLineEdit):
         self.textEdited.connect(self.__textEdited)
 
     def __textEdited(self, text):
-        print('textChanged called: {0}'.format(text))
         if self.__comma_enabled:
             self.setCommaToText()
 
