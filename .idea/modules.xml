@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/number_lineedit.iml" filepath="$PROJECT_DIR$/.idea/number_lineedit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pyqt_number_lineedit.iml" filepath="$PROJECT_DIR$/.idea/pyqt_number_lineedit.iml" />
     </modules>
   </component>
 </project>
