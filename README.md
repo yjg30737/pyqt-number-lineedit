@@ -7,5 +7,5 @@ QLineEdit which allows only numeric input. Isn't that awesome!?
 * PyQt5 >= 5.8
 
 ## Setup
-`pip3 install git+https://github.com/yjg30737/pyqt-number-lineedit.git --upgrade`
+`python -m pip install pyqt-number-lineedit`
 
